@@ -1,0 +1,22 @@
+<!--5. Create a JSON object and access it using dot notation.-->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Create a JSON object and access it using dot notation</title>
+</head>
+<body>
+<h2>Q5 Accessing JSON obj with . notation</h2>
+    <p id="demo"></p>
+    <p id="demo2"></p>
+    <p id="demo3"></p>
+
+    <script>
+      const myJSON = '{"name":"John", "age":30, "car":null}';
+      const myObj = JSON.parse(myJSON);
+      document.getElementById("demo").innerHTML = myObj.name;
+      document.getElementById("demo2").innerHTML = myObj.age;
+      document.getElementById("demo3").innerHTML = myObj.car;
+    </script>
+</body>
+</html>

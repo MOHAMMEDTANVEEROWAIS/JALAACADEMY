@@ -1,0 +1,26 @@
+<!--2. Show the javascript validation. When you click submit, the text box doesn't need to
+be empty.-->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Javascript validation</title>
+</head>
+<body>
+<h2>Show the javascript validation. When you click submit, the text box doesn't need to
+be empty.</h2>
+<form name="myForm" action="/action_page.php" onsubmit="return validateForm()" method="post" required>
+  Name: <input type="text" name="fname">
+  <input type="submit" value="Submit">
+</form>
+<script>
+function validateForm() {
+  var x = document.forms["myForm"]["fname"].value;
+  if (x == "") {
+    alert("Name must be filled out");
+    return false;
+  }
+}
+</script>
+</body>
+</html>
